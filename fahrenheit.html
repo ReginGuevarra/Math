@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Fahrenheit calculator</title>
+</head>
+<body>
+    <h1>Celsius to Fahrenheit calculator</h1>
+    <label for="inputCelsius">Enter Celsius amount </label>
+    <input type="text" name="display" id="inputCelsius">
+    <button id="btnCalculate" onclick="ConvertToFahrenheit()">Convert to Fahrenheit</button>
+    <h1>Fahrenheit: <br>
+    <div id="result"></div>
+    </h1>
+    <script src="app.js"></script>
+</body>
+</html>
+<script>
+function ConvertToFahrenheit() {
+    // Read the textvalue from the inputbox named inputCelsius
+    let myInput = document.getElementById("inputCelsius").value;
+    // Calculate Celsius into Fahrenheit formula: (Celsius * 1.8) + 32;
+    let fahrenheit = (myInput * 1.8) + 32;
+    // Display the result into a textfield on the page
+    document.getElementById("result").innerHTML = fahrenheit;
+}
+</script>
